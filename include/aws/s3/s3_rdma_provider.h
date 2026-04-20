@@ -211,7 +211,7 @@ struct aws_s3_rdma_provider_vtable {
         struct aws_s3_rdma_provider *provider);
     
     /**
-     * Get RDMA bytes header name (e.g., "x-amz-rdma-bytes")
+     * Get RDMA bytes header name (e.g., "x-amz-rdma-bytes-transferred")
      * @param provider Provider instance
      * @return Byte cursor pointing to the header name string
      */
@@ -547,7 +547,7 @@ struct aws_byte_cursor aws_s3_rdma_provider_get_rdma_reply_header_name(
 /**
  * Get RDMA bytes header name from provider
  * @param provider Provider instance
- * @return Byte cursor pointing to the header name string (e.g., "x-amz-rdma-bytes")
+ * @return Byte cursor pointing to the header name string (e.g., "x-amz-rdma-bytes-transferred")
  */
 AWS_S3_API
 struct aws_byte_cursor aws_s3_rdma_provider_get_rdma_bytes_header_name(

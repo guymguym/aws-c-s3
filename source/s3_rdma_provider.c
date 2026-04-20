@@ -289,7 +289,7 @@ struct aws_byte_cursor aws_s3_rdma_provider_get_rdma_bytes_header_name(
     
     if (!provider || !provider->vtable || !provider->vtable->get_rdma_bytes_header_name) {
         /* Fallback to old header name if provider doesn't implement new interface */
-        return aws_byte_cursor_from_c_str("x-amz-rdma-bytes");
+        return aws_byte_cursor_from_c_str("x-amz-rdma-bytes-transferred");
     }
     
     return provider->vtable->get_rdma_bytes_header_name(provider->provider_instance);

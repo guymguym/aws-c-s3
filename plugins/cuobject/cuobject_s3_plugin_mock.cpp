@@ -317,13 +317,13 @@ const char* cuobject_s3_plugin_get_rdma_reply_header_name() {
 }
 
 const char* cuobject_s3_plugin_get_rdma_bytes_header_name() {
-    return "x-amz-rdma-bytes";
+    return "x-amz-rdma-bytes-transferred";
 }
 
 // Configurable RDMA header names (initialized from environment variables)
 static std::string g_rdma_token_header_name = "x-amz-rdma-token";
 static std::string g_rdma_reply_header_name = "x-amz-rdma-reply";
-static std::string g_rdma_bytes_header_name = "x-amz-rdma-bytes";
+static std::string g_rdma_bytes_header_name = "x-amz-rdma-bytes-transferred";
 static bool g_header_names_initialized = false;
 
 // Initialize header names from environment variables
